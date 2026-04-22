@@ -1,63 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.nav-link {
-  @apply relative font-semibold text-white cursor-pointer text-[17px] w-fit md:block hidden;
+@layer base {
+  :root {
+    --background: 222 47% 11%; /* Deep slate/blue dark background */
+    --foreground: 210 40% 98%;
+
+    --primary: 189 94% 43%; /* Cyan */
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 280 87% 65%; /* Purple */
+    --accent-foreground: 210 40% 98%;
+  }
+
+  * {
+    @apply border-white/10;
+  }
   
-  /* Initial state of the pseudo-element */
-  position: relative;
+  body {
+    @apply bg-background text-foreground font-primary antialiased selection:bg-primary/30 selection:text-primary-foreground;
+    overflow-x: hidden;
+  }
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  height: 3px;
-  left: 0;
-  background-color: #facc15; /* Tailwind CSS yellow-400 */
-  width: 100%;
-  transform: scaleX(0);
-  transition: transform 0.3s;
-  transform-origin: center;
-  bottom: 0;
-  
-  
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.nav-link:hover::after {
-  transform: scaleX(1);
-}
-.nav-link-mobile {
-  @apply relative  font-semibold text-white cursor-pointer text-[27px] w-fit mb-[2rem]; /* Applying Tailwind classes */
-  position: relative;
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
 }
 
-.nav-link-mobile::after {
-  content: ''; /* Adding content to the pseudo-element */
-  position: absolute;
-  height: 3px;
-  left: 0;
-  background-color: #facc15; /* Tailwind CSS yellow-400 */
-  width: 100%;
-  transform: scaleX(0);
-  transition: transform 0.3s;
-  transform-origin: center;
-  bottom: 0;
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--secondary));
+  border-radius: 5px;
 }
 
-.nav-link-mobile:hover::after {
-  transform: scaleX(1);
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
 }
 
-.bg-hero {
-  background-image: url('/assets/images/bg-hero.jpg'); /* Use the absolute path */
-  background-size: cover;
-  background-position: center;
+/* Utilities for glassmorphism */
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
 }
 
-.heading{
-  @apply text-center text-white text-[28px] sm:text-[33px] md:text-[45px] font-bold uppercase
+.text-glow {
+  text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
 }

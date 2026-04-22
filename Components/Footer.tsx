@@ -1,59 +1,30 @@
-import { DevicePhoneMobileIcon, EnvelopeIcon, MapIcon } from '@heroicons/react/16/solid'
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
   return (
-    <div className='pt-[8rem] pb-[4rem] bg-[#02050a] '>
-      <div className='grid border-b-[1px] pb-[6rem] border-gray-400 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] mx-auto gap-[3rem]'>
-
-        <div className='flex items-center space-x-6'>
-          <div className='md:w-[5rem] md:h-[5rem] w-[5rem] h-[5rem] flex items-center justify-center rounded-full bg-[#55e6a5]'>
-            <MapIcon className='md:w-[4rem] md:h-[4rem] w-[3.5rem] h-[3.5rem] text-black'/>
+    <footer className="border-t border-white/10 bg-black/40 py-12">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="text-center md:text-left">
+            <h2 className="text-2xl font-bold text-white mb-2">Portfolio<span className="text-primary">.</span></h2>
+            <p className="text-white/60 text-sm">© {new Date().getFullYear()} Jinshid. All rights reserved.</p>
           </div>
 
-          <div>
-            <h1 className='text-[25px] mb-[0.2rem] font-semibold text-white'>Address</h1>
-            <p className='text-[17px] w-[90%] text-white opacity-60'>Mattara (H) Malappuram,kalikavu,pullengode (PO),Chokkad Panjayat </p>
-          </div>
-        </div>
-        <div className='flex items-center space-x-6'>
-          <div className='md:w-[5rem] md:h-[5rem] w-[5rem] h-[5rem] flex items-center justify-center rounded-full bg-[#55e6a5]'>
-            <DevicePhoneMobileIcon className='md:w-[4rem] md:h-[4rem] w-[3.5rem] h-[3.5rem] text-black'/>
-          </div>
-
-          <div>
-            <h1 className='text-[25px] mb-[0.2rem] font-semibold text-white'>Phone</h1>
-            <p className='text-[17px] w-[90%] text-white opacity-60'>+09539391138 <br />  +9038446676</p>
-          </div>
-        </div>
-        <div className='flex items-center space-x-6'>
-          <div className='md:w-[5rem] md:h-[5rem] w-[5rem] h-[5rem] flex items-center justify-center rounded-full bg-[#55e6a5]'>
-            <EnvelopeIcon className='md:w-[4rem] md:h-[4rem] w-[3.5rem] h-[3.5rem] text-black'/>
-          </div>
-
-          <div>
-            <h1 className='text-[25px] mb-[0.2rem] font-semibold text-white'>Send Us Email</h1>
-            <p className='text-[17px] w-[90%] text-white opacity-60'>jinshidjinu339@gmial.com <br /> +9099645245 </p>
+          <div className="flex items-center gap-4">
+            <a href="https://github.com/JinshidMattara" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:text-primary hover:scale-110 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/jinshid-m-406a8a2a6/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:text-primary hover:scale-110 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" className="w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:text-primary hover:scale-110 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            </a>
           </div>
         </div>
       </div>
-     
-     <div className='w-[80%] mt-[2rem] mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-between'>
-      <div className='text-[18px] mb-[2rem] md:mb-0 text-white opacity-20'>
-        Warriors 2023 | All Rights Reserved
-      </div>
+    </footer>
+  );
+};
 
-      <div className='flex items-center space-x-10'>
-        <p className='text-[18px] text-white opacity-20'>Terms & Condition</p> 
-        <p className='text-[18px] text-white opacity-20'>Privacy Policy</p> 
-        <p className='text-[18px] text-white opacity-20'>Sitemap</p> 
-
-      </div>
-
-     </div>
-
-    </div>
-  )
-}
-
-export default Footer
+export default Footer;
